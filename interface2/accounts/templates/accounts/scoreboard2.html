@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="card">
+<div class="card-body">
+	<p class=lead><a href="{% url 'scoreboard_full2' %}">Full scoreboard</a></p>
+	<p class=lead><a href="{% url 'scoreboard' %}">Scoreboard ordered by stage</a></p>
+  <table class="table table_strped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Team</th>
+        <th scope="col">Stage</th>
+        <th scope="col"># Challenges</th>
+        <th scope="col">Last solve</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% if cur_user %}
+    <tr class="table-primary">
+      <th scope="row"></th>
+      <td>{{ cur_user.username }}</td>
+      <td>{{ cur_user.stage }}</td>
+      <td>{{ cur_user.solves.all|length }}</td>
+      <td>{{ cur_user.last_chal_time|date:"Y-m-d H:i:s" }}</td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    {% endif %}
+    {% for u in users %}
+    {% if u.username == request.user.username %}
+    <tr class="table-primary">
+    {% else %}
+    <tr>
+    {% endif %}
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ u.username }}</td>
+      <td>{{ u.stage }}</td>
+      <td>{{ u.solves.all|length }}</td>
+      <td>{{ u.last_chal_time|date:"Y-m-d H:i:s" }}</td>
+    </tr>
+    {% endfor %}
+  </ul>
+    </tbody>
+  </table>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+mutation {
+  post1: createPost(
+    data: {
+      title: "Welcome to C3Junior"
+      content: "Everyday I'm querying"
+      published: true
+    }
+  ) {
+    id
+  }
+
+  post2: createPost(
+    data: {
+      title: "Yet another funny post created at 4:20 am (no, really)"
+      content: "Whaaaat!"
+      published: true
+    }
+  ) {
+    id
+  }
+
+  post3: createPost(
+    data: {
+      title: "Writings on the -Wall"
+      content: "domenukk was here"
+    }
+  ) {
+    id
+  }
+}

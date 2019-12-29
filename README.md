@@ -1,1 +1,1 @@
-# 36c3-junior-ctf-pub
+# 36c3-junior-ctf

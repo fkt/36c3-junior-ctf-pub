@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["esnext", "dom"]
+  },
+  "files": ["surfer.ts"]
+}

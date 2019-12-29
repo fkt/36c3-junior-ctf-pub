@@ -1,0 +1,23 @@
+{
+  "name": "weelang",
+  "version": "0.0.1",
+  "description": "Weelang for the server",
+  "scripts": {},
+  "dependencies": {
+    "@types/codemirror": "0.0.61",
+    "@types/howler": "2.0.5",
+    "@types/jquery": "3.3.10",
+    "@types/mocha": "5.2.0",
+    "@types/node": "12.12.21",
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "puppeteer": "^2.0.0",
+    "pypyjs": "^0.4.1",
+    "ts-node": "^8.5.4",
+    "ts-pegjs": "0.2.2",
+    "typescript": "3.1.1"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^1.11.1"
+  }
+}

@@ -1,0 +1,6 @@
+Simple reversing challenge with a constructor and destructor function
+and a couple of NOPs in the main function, a fake flag that gets mangled in the
+constructor and xor-de with every second byte of a static buffer in the
+descructor.
+An obvious red herring and a hint - output after main() after 10 seconds - are
+included.

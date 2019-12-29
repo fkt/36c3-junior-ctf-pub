@@ -1,0 +1,12 @@
+version: '3'
+services:
+  surfer:
+    build: ./surfer
+    restart: unless-stopped
+  flagfriendly:
+    build: .
+    restart: unless-stopped
+    depends_on: 
+      - surfer
+    ports:
+      - "8070:8070"

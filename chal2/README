@@ -1,0 +1,49 @@
+The command:
+  strace -eread,write,execve /bin/bash
+was executed.
+Then vim was installed via apt and the file Flag was opened in vim.
+The flag was written in a weird way using little vim shortcuts such as:
+  yy p
+At the end it was jumped to the beginning of the line:
+  gg
+Then lines were concatenated via lots of:
+  J
+Then the cursor moved backwards a couple of times using:
+  b
+Then a couple of character were changed to upper case using:
+  ~
+Finally the white spaces were removed by:
+  s/ //g
+
+If you simple grep for the read()s you get the following output, which is easy
+to read and reconstruct:
+541   read(0, "\r", 4096)               = 1
+541   read(0, "u", 4096)                = 1
+541   read(0, "n", 4096)                = 1
+541   read(0, "\r", 4096)               = 1
+541   read(0, "\r", 4096)               = 1
+541   read(0, "i", 4096)                = 1
+541   read(0, "o", 4096)                = 1
+541   read(0, "\r", 4096)               = 1
+541   read(0, "r", 4096)                = 1
+541   read(0, "-", 4096)                = 1
+541   read(0, "\r", 4096)               = 1
+541   read(0, "n", 4096)                = 1
+541   read(0, "a", 4096)                = 1
+541   read(0, "\33", 4096)              = 1
+541   read(0, "y", 4096)                = 1
+541   read(0, "y", 4096)                = 1
+541   read(0, "p", 4096)                = 1
+541   read(0, "A", 4096)                = 1
+541   read(0, "\177", 4096)             = 1
+541   read(0, "o", 4096)                = 1
+541   read(0, "\r", 4096)               = 1
+541   read(0, "\r", 4096)               = 1
+541   read(0, "i", 4096)                = 1
+541   read(0, "\r", 4096)               = 1
+541   read(0, "s", 4096)                = 1
+541   read(0, "\r", 4096)               = 1
+541   read(0, "\r", 4096)               = 1
+541   read(0, "w", 4096)                = 1
+541   read(0, "a", 4096)                = 1
+

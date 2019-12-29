@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="card">
+<div class="card-body">
+  <table class="table table_strped">
+    <thead>
+      <tr>
+        <th scope="col">Stage</th>
+        <th scope="col">Challenge 1</th>
+        <th scope="col">Challenge 2</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for s, cs in challenges.items %}
+    {% if s == request.user.stage %}
+    <tr class="table-primary">
+    {% else %}
+    <tr>
+    {% endif %}
+      <td>{{ s }}</td>
+    	{% for c in cs %}
+	{% if c.id in solves %}
+	<td class="bg-success">
+	{% else %}
+	<td>
+	{% endif %}
+	<a href="/challenges/{{ c.id }}">{{ c.name }}</a>
+	</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </ul>
+    </tbody>
+  </table>
+</div>
+</div>
+{% endblock %}

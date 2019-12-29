@@ -1,0 +1,11 @@
+version: '3'
+services:
+  surfer:
+    build: ./surfer
+    restart: unless-stopped
+  noncechallpass:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8010:8010"
+  

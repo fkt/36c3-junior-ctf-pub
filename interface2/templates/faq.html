@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Kuchenblech{% endblock %}
+
+{% block content %}
+<h3>FAQ</h3>
+          <dl class="row text-left">
+            <dt class="col-sm-4">
+            What is a Capture the Flag (CTF)?
+            </dt>
+            <dd class="col-sm-8">
+            Read this: <a href="http://ctftime.org/ctf-wtf/">http://ctftime.org/ctf-wtf/</a>
+            </dd>
+            <dt class="col-sm-4">
+            What kind of CTF is this?
+            </dt>
+            <dd class="col-sm-8">
+            It's a CTF designed to be friendly to beginners. There will be multiple stages with 2 challenges from different areas of computer security. Solving 1 of those challenges will advance you to the next stage. There will be 2 winners: First team solving the last stage + first team solving all challenges.
+            </dd>
+            <dt class="col-sm-4">
+            How does this relate to the <a href="https://2019.ctf.link/">main 36C3 CTF</a>?
+            </dt>
+            <dd class="col-sm-8">
+            This is a completely separate contest designed for beginners. If you are playing this CTF and
+            find it too easy, or you are able to finish all tasks, feel free to try the main CTF! It is way cooler!
+            </dd>
+            <dt class="col-sm-4">Where can I get help?</dt>
+            <dd class="col-sm-8">
+            You can always join our IRC channel <a href="https://kiwiirc.com/client/irc.freenode.net/?nick=h4x0r%7C?&amp;theme=cli#kuchenblech">freenode | #kuchenblech</a>
+            and ask questions. Also, we will be on-site at the C3, so you are invited to swing by and chat with us.
+            </dd>
+            <dt class="col-sm-4">
+            Is there a flag format?</dt>
+            <dd class="col-sm-8">
+            Yes! Hopefully they all start with junior- ;)<br>
+            <code>junior-This_i5_our_Flag_forma7_:)</code>
+            </dd>
+          </dl>
+{% endblock %}

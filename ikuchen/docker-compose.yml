@@ -1,0 +1,7 @@
+version: '3'
+services:
+  ikuchen:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "5656:5656"

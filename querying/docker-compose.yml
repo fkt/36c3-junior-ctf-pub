@@ -1,0 +1,7 @@
+version: '3'
+services:
+  querying:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "80:4000"

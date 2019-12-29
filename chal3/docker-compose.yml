@@ -1,0 +1,7 @@
+version: '3'
+services:
+  chal3:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "80:8080"
